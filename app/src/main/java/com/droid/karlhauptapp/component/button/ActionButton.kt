@@ -18,9 +18,7 @@ import com.droid.karlhauptapp.ui.theme.primaryBlue
 
 @SuppressLint("UnrememberedMutableState")
 @Composable
-fun ActionButton(content: String, icon: ImageVector ?= null, shouldShowDialog: MutableState<Boolean>) {
-//    var shouldShowDialog = remember { mutableStateOf(false) }
-
+fun ActionButton(content: String, icon: ImageVector ?= null, state: MutableState<Boolean> ?= null) {
     Row(
         modifier = Modifier.padding(all = 8.dp),
         verticalAlignment = Alignment.CenterVertically,
@@ -30,10 +28,7 @@ fun ActionButton(content: String, icon: ImageVector ?= null, shouldShowDialog: M
             modifier = Modifier.width(100.dp),
             colors = ButtonDefaults.buttonColors(backgroundColor = primaryBlue),
             border = BorderStroke(width = 1.dp, brush = SolidColor(Color(0xFF42cef5))),
-            onClick = {
-                shouldShowDialog.value = true
-            }
-
+            onClick = { if(state != null) state.value = true }
             ) {
 
             LoadIcon(icon)
@@ -45,9 +40,7 @@ fun ActionButton(content: String, icon: ImageVector ?= null, shouldShowDialog: M
                 color = Color.White,
                 text = content.uppercase()
             )
-
         }
-
     }
 }
 

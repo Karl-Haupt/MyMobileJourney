@@ -60,7 +60,7 @@ fun PreviewHome() {
 
         Spacer(modifier = Modifier.width(4.dp))
 
-        ActionButton(content = "INFO", icon = Icons.Outlined.Info, shouldShowDialog = shouldShowDialog)
+        ActionButton(content = "INFO", icon = Icons.Outlined.Info, state = shouldShowDialog)
         RenderDialog(shouldShowDialog)
     }
 
