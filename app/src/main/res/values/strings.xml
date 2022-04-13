@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">KarlHauptApp</string>
+    <string name="my_journey">
+       "This year, I began my Mobile Programming course with the expectation that it would be similar to the prior year, in which we used traditional and robust methods to create Android apps(s). To my surprise I found out that we were learning Jetpack Compose. This is a framework/library I'd never heard of until this year.
+The vast amount of knowledge I have obtain over these last 4 months, has inspired me to really pursue a career in Mobile Programming and to extend my knowledge.
+Jetpack Compose has too many features to sum up in a short paragraph but all I know is that I'm exciting for whats still to come and also to see how Jetpack Compose will become mainstream for Mobile Apps"
+    </string>
+</resources>
