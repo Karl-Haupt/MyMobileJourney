@@ -5,6 +5,9 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.darkColors
 import androidx.compose.material.lightColors
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.setValue
 
 private val DarkColorPalette = darkColors(
     primary = Purple200,
@@ -28,17 +31,13 @@ private val LightColorPalette = lightColors(
 )
 
 @Composable
-fun KarlHauptAppTheme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Composable () -> Unit) {
-    val colors = if (darkTheme) {
-        DarkColorPalette
-    } else {
-        LightColorPalette
-    }
+fun KarlHauptAppTheme(content: @Composable () -> Unit) {
+    val isDarkThemeEnabled = isSystemInDarkTheme() || KarlHauptAppThemeSettings.isDarkThemeEnabled
+    val colors = if (isDarkThemeEnabled) DarkColorPalette else LightColorPalette
 
-    MaterialTheme(
-        colors = colors,
-        typography = Typography,
-        shapes = Shapes,
-        content = content
-    )
+    MaterialTheme(colors = colors, content = content)
+}
+
+object KarlHauptAppThemeSettings {
+    var isDarkThemeEnabled by mutableStateOf(false)
 }

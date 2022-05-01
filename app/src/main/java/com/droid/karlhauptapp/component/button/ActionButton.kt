@@ -18,17 +18,16 @@ import com.droid.karlhauptapp.ui.theme.primaryBlue
 
 @SuppressLint("UnrememberedMutableState")
 @Composable
-fun ActionButton(content: String, icon: ImageVector ?= null, state: MutableState<Boolean> ?= null) {
+fun ActionButton(content: String, icon: ImageVector ?= null, btnOnClick: () -> Unit) {
     Row(
         modifier = Modifier.padding(all = 8.dp),
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.Center
     ) {
         Button(
-            modifier = Modifier.width(100.dp),
             colors = ButtonDefaults.buttonColors(backgroundColor = primaryBlue),
             border = BorderStroke(width = 1.dp, brush = SolidColor(Color(0xFF42cef5))),
-            onClick = { if(state != null) state.value = true }
+            onClick = { btnOnClick() }
             ) {
 
             LoadIcon(icon)
