@@ -56,7 +56,7 @@ fun JourneyScreen() {
             Box(
                 modifier = Modifier.align(Alignment.CenterHorizontally)
             ) {
-                ActionButton(content = "COURSES", icon = Icons.Outlined.AccountBox, btnOnClick = {})
+                ActionButton(content = "CURRENT MODULES", icon = Icons.Outlined.AccountBox, btnOnClick = {})
             }
     }
 
