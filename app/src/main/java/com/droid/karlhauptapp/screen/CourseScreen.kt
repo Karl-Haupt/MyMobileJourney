@@ -35,14 +35,14 @@ private var shouldShowDialog = mutableStateOf(false)
 @Composable
 fun CourseScreen(navController: NavController) {
     var courseList = listOf(
-        Module(courseName = "Application Development Practice 3", courseType = "Practical", courseDuration = "Yearly"),
-        Module(courseName = "Application Development Theory 3", courseType = "Theory", courseDuration = "Yearly"),
+        Module(courseName = "Application Development Practice 3", courseType = "Practical", courseDuration = "Year-around"),
+        Module(courseName = "Application Development Theory 3", courseType = "Theory", courseDuration = "Year-around"),
         Module(courseName = "ICT Electives 3", courseType = "Practical", courseDuration = "Semester"),
-        Module(courseName = "Information Systems 3", courseType = "Theory", courseDuration = "Yearly"),
-        Module(courseName = "Professional Practice 3", courseType = "Theory", courseDuration = "Yearly"),
-        Module(courseName = "Project 3", courseType = "Practical", courseDuration = "Yearly"),
+        Module(courseName = "Information Systems 3", courseType = "Theory", courseDuration = "Year-around"),
+        Module(courseName = "Professional Practice 3", courseType = "Theory", courseDuration = "Year-around"),
+        Module(courseName = "Project 3", courseType = "Practical", courseDuration = "Year-around"),
         Module(courseName = "Project Management 3", courseType = "Theory", courseDuration = "Semester"),
-        Module(courseName = "Project Presentation 3", courseType = "Theory", courseDuration = "Yearly"),
+        Module(courseName = "Project Presentation 3", courseType = "Theory", courseDuration = "Year-around"),
     )
     var scrollstate = rememberScrollState()
 
