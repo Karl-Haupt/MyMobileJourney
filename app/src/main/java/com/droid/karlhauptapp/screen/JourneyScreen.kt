@@ -18,10 +18,11 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.droid.karlhauptapp.component.button.ActionButton
+import com.droid.karlhauptapp.routing.Screen
 import com.droid.karlhauptapp.ui.theme.primaryBlue
 
 @Composable
-fun JourneyScreen() {
+fun JourneyScreen(navController: NavController) {
     Box(
         modifier = Modifier.fillMaxSize(),
         contentAlignment = Alignment.Center,
@@ -56,7 +57,10 @@ fun JourneyScreen() {
             Box(
                 modifier = Modifier.align(Alignment.CenterHorizontally)
             ) {
-                ActionButton(content = "CURRENT MODULES", icon = Icons.Outlined.AccountBox, btnOnClick = {})
+                ActionButton(
+                    content = "CURRENT MODULES",
+                    icon = Icons.Outlined.AccountBox,
+                    btnOnClick = { navController.navigate(Screen.CourseScreen.route) })
             }
     }
 
